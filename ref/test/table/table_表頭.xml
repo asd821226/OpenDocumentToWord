@@ -1,0 +1,39 @@
+<!-- table header:開始 -->
+<w:p>
+	<w:pPr>
+		<w:pStyle w:val="2" />
+		<w:rPr>
+			<w:rFonts w:ascii="Arial" w:cs="Arial" w:hAnsi="Arial" />
+			<w:color w:val="7F007F" />
+			<w:sz w:val="28" />
+			<w:szCs w:val="28" />
+		</w:rPr>
+	</w:pPr>
+	
+	<!-- w:bookmarkStart:書籤:開始 -->
+	<w:bookmarkStart w:id="1" w:name="tbl_0" />
+	
+	<w:r>
+		<w:rPr>
+			<w:rFonts w:ascii="Arial" w:cs="Arial" w:hAnsi="Arial" />
+			<w:color w:val="7F007F" />
+			<w:sz w:val="28" />
+			<w:szCs w:val="28" />
+		</w:rPr>
+		<w:lastRenderedPageBreak />
+		<w:t>DLC.FUNCTION_DATA </w:t>
+	</w:r>
+	<w:r>
+		<w:rPr>
+			<w:rFonts w:ascii="Arial" w:cs="Arial" w:hAnsi="Arial" />
+			<w:color w:val="7F007F" />
+			<w:sz w:val="28" />
+			<w:szCs w:val="28" />
+		</w:rPr>
+		<w:t>功能表</w:t>
+	</w:r>
+	
+	<w:bookmarkEnd w:id="1" />
+	<!-- w:bookmarkStart:書籤:開始 -->
+</w:p>
+<!-- table header:結束 -->

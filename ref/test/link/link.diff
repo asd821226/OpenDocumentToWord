@@ -1,0 +1,184 @@
+--- D:\open_document\list\link_test\link_clear\word\document.xml 
++++ D:\open_document\list\link_test\link\word\document.xml 
+@@ -42,8 +42,8 @@
+ 				<w:tblLook w:val="04A0"/>
+ 			</w:tblPr>
+ 			<w:tblGrid>
+-				<w:gridCol w:w="7936"/>
+-				<w:gridCol w:w="2590"/>
++				<w:gridCol w:w="8092"/>
++				<w:gridCol w:w="2434"/>
+ 			</w:tblGrid>
+ 			<w:tr w:rsidR="007373F2" w:rsidRPr="007373F2" w:rsidTr="007373F2">
+ 				<w:tc>
+@@ -160,7 +160,7 @@
+ 						</w:tcMar>
+ 						<w:hideMark/>
+ 					</w:tcPr>
+-					<w:p w:rsidP="007373F2" w:rsidR="007373F2" w:rsidRDefault="007373F2" w:rsidRPr="007373F2">
++					<w:p w:rsidP="007373F2" w:rsidR="007373F2" w:rsidRDefault="00D34350" w:rsidRPr="007373F2">
+ 						<w:pPr>
+ 							<w:widowControl/>
+ 							<w:spacing w:after="100" w:afterAutospacing="1" w:before="100" w:beforeAutospacing="1"/>
+@@ -172,16 +172,17 @@
+ 								<w:szCs w:val="20"/>
+ 							</w:rPr>
+ 						</w:pPr>
+-						<w:r w:rsidRPr="007373F2">
+-							<w:rPr>
+-								<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體" w:hAnsi="Arial"/>
+-								<w:color w:val="333366"/>
+-								<w:kern w:val="0"/>
+-								<w:sz w:val="20"/>
+-								<w:u w:val="single"/>
+-							</w:rPr>
+-							<w:t>DLC.FUNCTION_DATA</w:t>
+-						</w:r>
++						<w:hyperlink w:anchor="_DLC.FUNCTION_DATA_功能表" w:history="1">
++							<w:r w:rsidR="007373F2" w:rsidRPr="00D34350">
++								<w:rPr>
++									<w:rStyle w:val="a3"/>
++									<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體" w:hAnsi="Arial"/>
++									<w:kern w:val="0"/>
++									<w:sz w:val="20"/>
++								</w:rPr>
++								<w:t>DLC.FUNCTION_DATA</w:t>
++							</w:r>
++						</w:hyperlink>
+ 					</w:p>
+ 				</w:tc>
+ 				<w:tc>
+@@ -202,7 +203,7 @@
+ 						</w:tcMar>
+ 						<w:hideMark/>
+ 					</w:tcPr>
+-					<w:p w:rsidP="007373F2" w:rsidR="007373F2" w:rsidRDefault="007373F2" w:rsidRPr="007373F2">
++					<w:p w:rsidP="007373F2" w:rsidR="007373F2" w:rsidRDefault="00635E9F" w:rsidRPr="007373F2">
+ 						<w:pPr>
+ 							<w:widowControl/>
+ 							<w:spacing w:after="100" w:afterAutospacing="1" w:before="100" w:beforeAutospacing="1"/>
+@@ -214,26 +215,17 @@
+ 								<w:szCs w:val="20"/>
+ 							</w:rPr>
+ 						</w:pPr>
+-						<w:r w:rsidRPr="007373F2">
+-							<w:rPr>
+-								<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體" w:hAnsi="Arial"/>
+-								<w:color w:val="333366"/>
+-								<w:kern w:val="0"/>
+-								<w:sz w:val="20"/>
+-								<w:u w:val="single"/>
+-							</w:rPr>
+-							<w:t>功能表</w:t>
+-						</w:r>
+-						<w:r w:rsidRPr="007373F2">
+-							<w:rPr>
+-								<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體" w:hAnsi="Arial"/>
+-								<w:color w:val="3333B8"/>
+-								<w:kern w:val="0"/>
+-								<w:sz w:val="20"/>
+-								<w:szCs w:val="20"/>
+-							</w:rPr>
+-							<w:t> </w:t>
+-						</w:r>
++						<w:hyperlink w:anchor="_DLC.FUNCTION_DATA_功能表" w:history="1">
++							<w:r w:rsidR="007373F2" w:rsidRPr="00635E9F">
++								<w:rPr>
++									<w:rStyle w:val="a3"/>
++									<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體" w:hAnsi="Arial"/>
++									<w:kern w:val="0"/>
++									<w:sz w:val="20"/>
++								</w:rPr>
++								<w:t>功能表</w:t>
++							</w:r>
++						</w:hyperlink>
+ 					</w:p>
+ 				</w:tc>
+ 			</w:tr>
+@@ -257,6 +249,8 @@
+ 					<w:szCs w:val="28"/>
+ 				</w:rPr>
+ 			</w:pPr>
++			<w:bookmarkStart w:id="0" w:name="_DLC.FUNCTION_DATA_功能表"/>
++			<w:bookmarkEnd w:id="0"/>
+ 			<w:r>
+ 				<w:rPr>
+ 					<w:rFonts w:ascii="Arial" w:cs="Arial" w:hAnsi="Arial"/>
+@@ -619,7 +613,7 @@
+ 													<pic:cNvPicPr/>
+ 												</pic:nvPicPr>
+ 												<pic:blipFill>
+-													<a:blip cstate="print" r:embed="rId4"/>
++													<a:blip cstate="print" r:embed="rId6"/>
+ 													<a:stretch>
+ 														<a:fillRect/>
+ 													</a:stretch>
+@@ -878,7 +872,7 @@
+ 													<pic:cNvPicPr/>
+ 												</pic:nvPicPr>
+ 												<pic:blipFill>
+-													<a:blip cstate="print" r:embed="rId5"/>
++													<a:blip cstate="print" r:embed="rId7"/>
+ 													<a:stretch>
+ 														<a:fillRect/>
+ 													</a:stretch>
+@@ -1386,6 +1380,7 @@
+ 						<w:r w:rsidRPr="007373F2">
+ 							<w:rPr>
+ 								<w:rFonts w:ascii="Arial" w:cs="Arial" w:hAnsi="Arial"/>
++								<w:noProof/>
+ 								<w:color w:val="3333B8"/>
+ 								<w:sz w:val="20"/>
+ 								<w:szCs w:val="20"/>
+@@ -1406,7 +1401,7 @@
+ 													<pic:cNvPicPr/>
+ 												</pic:nvPicPr>
+ 												<pic:blipFill>
+-													<a:blip cstate="print" r:embed="rId5"/>
++													<a:blip cstate="print" r:embed="rId7"/>
+ 													<a:stretch>
+ 														<a:fillRect/>
+ 													</a:stretch>
+@@ -1914,6 +1909,7 @@
+ 						<w:r w:rsidRPr="007373F2">
+ 							<w:rPr>
+ 								<w:rFonts w:ascii="Arial" w:cs="Arial" w:hAnsi="Arial"/>
++								<w:noProof/>
+ 								<w:color w:val="3333B8"/>
+ 								<w:sz w:val="20"/>
+ 								<w:szCs w:val="20"/>
+@@ -1934,7 +1930,7 @@
+ 													<pic:cNvPicPr/>
+ 												</pic:nvPicPr>
+ 												<pic:blipFill>
+-													<a:blip cstate="print" r:embed="rId5"/>
++													<a:blip cstate="print" r:embed="rId7"/>
+ 													<a:stretch>
+ 														<a:fillRect/>
+ 													</a:stretch>
+@@ -2605,6 +2601,7 @@
+ 						<w:r w:rsidRPr="007373F2">
+ 							<w:rPr>
+ 								<w:rFonts w:ascii="Arial" w:cs="Arial" w:hAnsi="Arial"/>
++								<w:noProof/>
+ 								<w:color w:val="3333B8"/>
+ 								<w:sz w:val="20"/>
+ 								<w:szCs w:val="20"/>
+@@ -2625,7 +2622,7 @@
+ 													<pic:cNvPicPr/>
+ 												</pic:nvPicPr>
+ 												<pic:blipFill>
+-													<a:blip cstate="print" r:embed="rId5"/>
++													<a:blip cstate="print" r:embed="rId7"/>
+ 													<a:stretch>
+ 														<a:fillRect/>
+ 													</a:stretch>
+@@ -2649,7 +2646,7 @@
+ 				</w:tc>
+ 			</w:tr>
+ 		</w:tbl>
+-		<w:p w:rsidR="009B7638" w:rsidRDefault="00650284"/>
++		<w:p w:rsidR="009B7638" w:rsidRDefault="008071FC"/>
+ 		<w:sectPr w:rsidR="009B7638" w:rsidSect="00E967D2">
+ 			<w:pgSz w:h="16838" w:w="11906"/>
+ 			<w:pgMar w:bottom="720" w:footer="992" w:gutter="0" w:header="851" w:left="720" w:right="720" w:top="720"/>

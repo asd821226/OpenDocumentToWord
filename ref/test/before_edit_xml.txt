@@ -1,0 +1,39 @@
+>>>
+
+在從svn_build中, copy相關的表格到word上後,
+
+一定要先清除相關的連結及bookmark,以完成一個clean word file.
+
+並且記得先插入相關的圖片.
+
+因此乾淨的檔案結構應該如下圖所示
+
+│  [Content_Types].xml
+│
+├─docProps
+│      app.xml
+│      core.xml
+│
+├─word
+│  │  document.xml
+│  │  endnotes.xml
+│  │  fontTable.xml
+│  │  footnotes.xml
+│  │  settings.xml
+│  │  styles.xml
+│  │  webSettings.xml
+│  │
+│  ├─media
+│  │      image1.gif
+│  │      image2.gif
+│  │
+│  ├─theme
+│  │      theme1.xml
+│  │
+│  └─_rels
+│          document.xml.rels
+│
+└─_rels
+        .rels
+        
+ 

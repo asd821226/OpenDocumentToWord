@@ -1,0 +1,38 @@
+--- from_file 
++++ <w:tr> 
+@@ -8,7 +8,7 @@
+                            <w:bottom w:color="999999" w:space="0" w:sz="6" w:val="single"/>
+                            <w:right w:color="999999" w:space="0" w:sz="6" w:val="single"/>
+                        </w:tcBorders>
+-                       <w:shd w:color="auto" w:fill="EEEEFF" w:val="clear"/>
++                       <w:shd w:color="auto" w:fill="FFFFFF" w:val="clear"/>
+                        <w:tcMar>
+                            <w:top w:type="dxa" w:w="30"/>
+                            <w:left w:type="dxa" w:w="30"/>
+@@ -37,7 +37,7 @@
+                                <w:sz w:val="20"/>
+                                <w:u w:val="single"/>
+                            </w:rPr>
+-                           <w:t>DLC.BRANCH_DATA</w:t>
++                           <w:t>DLC.FUNCTION_DATA</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+@@ -50,7 +50,7 @@
+                            <w:bottom w:color="999999" w:space="0" w:sz="6" w:val="single"/>
+                            <w:right w:color="999999" w:space="0" w:sz="6" w:val="single"/>
+                        </w:tcBorders>
+-                       <w:shd w:color="auto" w:fill="EEEEFF" w:val="clear"/>
++                       <w:shd w:color="auto" w:fill="FFFFFF" w:val="clear"/>
+                        <w:tcMar>
+                            <w:top w:type="dxa" w:w="30"/>
+                            <w:left w:type="dxa" w:w="30"/>
+@@ -79,7 +79,7 @@
+                                <w:sz w:val="20"/>
+                                <w:u w:val="single"/>
+                            </w:rPr>
+-                           <w:t>分行資料</w:t>
++                           <w:t>功能表</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>

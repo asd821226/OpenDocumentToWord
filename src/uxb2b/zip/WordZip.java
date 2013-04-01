@@ -51,7 +51,7 @@ public class WordZip {
      * @throws FileNotFoundException
      * @throws IOException
      */
-    private static void fileZip(ZipOutputStream out, File file)
+    public static void fileZip(ZipOutputStream out, File file)
             throws UnsupportedEncodingException, FileNotFoundException,
             IOException {
         

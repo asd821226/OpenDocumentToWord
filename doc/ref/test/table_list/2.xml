@@ -1,0 +1,103 @@
+<w:tr>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="auto" w:w="0" />
+			<w:tcBorders>
+				<w:top w:val="nil" />
+				<w:left w:val="nil" />
+				<w:bottom w:color="999999" w:space="0" w:sz="6" w:val="single" />
+				<w:right w:color="999999" w:space="0" w:sz="6" w:val="single" />
+			</w:tcBorders>
+			<w:shd w:color="auto" w:fill="FFFFFF" w:val="clear" />
+			<w:tcMar>
+				<w:top w:type="dxa" w:w="30" />
+				<w:left w:type="dxa" w:w="30" />
+				<w:bottom w:type="dxa" w:w="30" />
+				<w:right w:type="dxa" w:w="30" />
+			</w:tcMar>
+			<w:hideMark />
+		</w:tcPr>
+		<w:p>
+			<w:pPr>
+				<w:widowControl />
+				<w:spacing w:after="100" w:afterAutospacing="1" w:before="100"
+					w:beforeAutospacing="1" />
+				<w:rPr>
+					<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體"
+						w:hAnsi="Arial" />
+					<w:color w:val="3333B8" />
+					<w:kern w:val="0" />
+					<w:sz w:val="20" />
+					<w:szCs w:val="20" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體"
+						w:hAnsi="Arial" />
+					<w:color w:val="333366" />
+					<w:kern w:val="0" />
+					<w:sz w:val="20" />
+					<w:u w:val="single" />
+				</w:rPr>
+				<w:t>DLC.FUNCTION_DATA</w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+	<w:tc>
+		<w:tcPr>
+			<w:tcW w:type="auto" w:w="0" />
+			<w:tcBorders>
+				<w:top w:val="nil" />
+				<w:left w:val="nil" />
+				<w:bottom w:color="999999" w:space="0" w:sz="6" w:val="single" />
+				<w:right w:color="999999" w:space="0" w:sz="6" w:val="single" />
+			</w:tcBorders>
+			<w:shd w:color="auto" w:fill="FFFFFF" w:val="clear" />
+			<w:tcMar>
+				<w:top w:type="dxa" w:w="30" />
+				<w:left w:type="dxa" w:w="30" />
+				<w:bottom w:type="dxa" w:w="30" />
+				<w:right w:type="dxa" w:w="30" />
+			</w:tcMar>
+			<w:hideMark />
+		</w:tcPr>
+		<w:p>
+			<w:pPr>
+				<w:widowControl />
+				<w:spacing w:after="100" w:afterAutospacing="1" w:before="100"
+					w:beforeAutospacing="1" />
+				<w:rPr>
+					<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體"
+						w:hAnsi="Arial" />
+					<w:color w:val="3333B8" />
+					<w:kern w:val="0" />
+					<w:sz w:val="20" />
+					<w:szCs w:val="20" />
+				</w:rPr>
+			</w:pPr>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體"
+						w:hAnsi="Arial" />
+					<w:color w:val="333366" />
+					<w:kern w:val="0" />
+					<w:sz w:val="20" />
+					<w:u w:val="single" />
+				</w:rPr>
+				<w:t>功能表</w:t>
+			</w:r>
+			<w:r>
+				<w:rPr>
+					<w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="新細明體"
+						w:hAnsi="Arial" />
+					<w:color w:val="3333B8" />
+					<w:kern w:val="0" />
+					<w:sz w:val="20" />
+					<w:szCs w:val="20" />
+				</w:rPr>
+				<w:t> </w:t>
+			</w:r>
+		</w:p>
+	</w:tc>
+</w:tr>

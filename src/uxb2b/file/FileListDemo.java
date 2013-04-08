@@ -2,6 +2,12 @@ package uxb2b.file;
 
 import java.io.File;
 
+/**
+ * 檔案清單
+ * 
+ * @author tony
+ *
+ */
 public class FileListDemo {
 
     /**

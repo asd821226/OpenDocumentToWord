@@ -37,34 +37,34 @@ public class SqlScriptToWordDemo {
 
         // TODO:TEST:read db script file
         String sqlFile = "src/uxb2b/sql/Script_FN_LB04_script_phase2.sql";
+        // String sqlFile = "src/uxb2b/sql/tcb_script.sql";
         SqlScriptToWordDemo scriptContent = new SqlScriptToWordDemo();
         scriptContent.parse(sqlFile);
 
         // into freemarker
         // Freemarker configuration object
-        String templateFile = "src/uxb2b/working/ftl/helloworld.ftl";
+        String templateFile = "src/uxb2b/working/ftl/document.ftl";
 
         Configuration cfg = new Configuration();
+        // Build the data-model
+        Map<String, Object> ftlVo = new HashMap<String, Object>();
         try {
             // Load template from source folder
             Template template = cfg.getTemplate(templateFile);
 
-//            Map<String, TableVO> dataTest = new HashMap<String, TableVO>();
-//            dataTest = voMap;
+            ftlVo.put("message", "Hello World");
+            ftlVo.put("tableData", voMap);
 
-            // TEST DATA
-            
             // Console output
             Writer out = new OutputStreamWriter(System.out);
-            template.process(voMap, out);
+            template.process(ftlVo, out);
             out.flush();
 
             // File output
-            // Writer file = new FileWriter(new File(
-            // "word/word/document.xml"));
-            // template.process(voMap, file);
-            // file.flush();
-            // file.close();
+            Writer file = new FileWriter(new File("word/word/document.xml"));
+            template.process(ftlVo, file);
+            file.flush();
+            file.close();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -73,27 +73,27 @@ public class SqlScriptToWordDemo {
         }
 
         // file to zip
-        // try {
-        //
-        // // zip output file:副檔名可直接命名為docx
-        // FileOutputStream f = new FileOutputStream("build/word/xxx.docx");
-        //
-        // //
-        // // CheckedOutputStream ch = new CheckedOutputStream(f, new CRC32());
-        // // Adler32
-        // CheckedOutputStream ch = new CheckedOutputStream(f, new Adler32());
-        // ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(
-        // ch));
-        //
-        // // zip input folder
-        // File file = new File("word");
-        //
-        // WordZip.fileZip(out, file);
-        //
-        // out.close();
-        // } catch (Exception e) {
-        // e.printStackTrace();
-        // }
+        try {
+
+            // zip output file:副檔名可直接命名為docx
+            FileOutputStream f = new FileOutputStream("build/word/xxx.docx");
+
+            //
+            // CheckedOutputStream ch = new CheckedOutputStream(f, new CRC32());
+            // Adler32
+            CheckedOutputStream ch = new CheckedOutputStream(f, new Adler32());
+            ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(
+                    ch));
+
+            // zip input folder
+            File file = new File("word");
+
+            WordZip.fileZip(out, file);
+
+            out.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

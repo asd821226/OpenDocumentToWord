@@ -18,6 +18,8 @@ import java.util.zip.ZipOutputStream;
  * 壓縮比較可參考:
  * http://java-performance.info/java-crc32-and-adler32/
  * 
+ * @purpose 測試直接壓縮指定目錄到特定的壓縮名稱中
+ * 
  * @author tony
  *
  */

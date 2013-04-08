@@ -11,21 +11,22 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 public class FileUtils {
-
-    /**
-     * TODO:TEST CODE ???
-     * @param args
+    
+    private static Log log = LogFactory.getLog(FileUtils.class);
+    
+    /** 
+     * Read the given binary file, 
+     * and return its contents as a byte array. 
+     * 
      */
-    public static void main(String[] args) {
-
-    }
-
-    /** Read the given binary file, and return its contents as a byte array. */
     public static byte[] read(String aInputFileName) {
-        log("Reading in binary file named : " + aInputFileName);
+        log.info("Reading in binary file named : " + aInputFileName);
         File file = new File(aInputFileName);
-        log("File size: " + file.length());
+        log.info("File size: " + file.length());
         byte[] result = new byte[(int) file.length()];
         try {
             InputStream input = null;
@@ -46,15 +47,15 @@ public class FileUtils {
                  * 'result' array; 'result' is an output parameter; the while
                  * loop usually has a single iteration only.
                  */
-                log("Num bytes read: " + totalBytesRead);
+                log.info("Num bytes read: " + totalBytesRead);
             } finally {
-                log("Closing input stream.");
+                log.info("Closing input stream.");
                 input.close();
             }
         } catch (FileNotFoundException ex) {
-            log("File not found.");
+            log.error("File not found.");
         } catch (IOException ex) {
-            log(ex);
+            log.error("e:" + ex);
         }
         return result;
     }
@@ -64,7 +65,7 @@ public class FileUtils {
      * significantly simpler than reading it.
      */
     public static void write(byte[] aInput, String aOutputFileName) {
-        log("Writing binary file...");
+        log.info("Writing binary file...");
         try {
             OutputStream output = null;
             try {
@@ -76,24 +77,24 @@ public class FileUtils {
                 output.close();
             }
         } catch (FileNotFoundException ex) {
-            log("File not found.");
+            log.error("File not found.");
         } catch (IOException ex) {
-            log(ex);
+            log.error("e:" + ex);
         }
     }
 
     /** Read the given binary file, and return its contents as a byte array. */
     public static byte[] readAlternateImpl(String aInputFileName) {
-        log("Reading in binary file named : " + aInputFileName);
+        log.info("Reading in binary file named : " + aInputFileName);
         File file = new File(aInputFileName);
-        log("File size: " + file.length());
+        log.info("File size: " + file.length());
         byte[] result = null;
         try {
             InputStream input = new BufferedInputStream(new FileInputStream(
                     file));
             result = readAndClose(input);
         } catch (FileNotFoundException ex) {
-            log(ex);
+            log.error("e:" + ex);
         }
         return result;
     }
@@ -127,13 +128,9 @@ public class FileUtils {
                 // ByteArrayOutputStream
             }
         } catch (IOException ex) {
-            log(ex);
+            log.error("e:" + ex);
         }
         return result.toByteArray();
-    }
-
-    private static void log(Object aThing) {
-        System.out.println(String.valueOf(aThing));
     }
 
 }

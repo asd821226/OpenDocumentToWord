@@ -13,9 +13,12 @@ import java.util.zip.Adler32;
 import java.util.zip.CheckedOutputStream;
 import java.util.zip.ZipOutputStream;
 
-import uxb2b.vo.TableVO;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 
 import com.uxb2b.word.main.utils.ZipUtils;
+import com.uxb2b.word.main.vo.TableVO;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -23,9 +26,11 @@ import freemarker.template.TemplateException;
 
 public class SqlScriptToWord {
     
-    private final static String SQL_TABLE_WORD_TEMPLATE_PATH = "src/com/uxb2b/word/main/word_template/sql_table/";
-    private final static String SQL_TABLE_FTL_PATH = "src/com/uxb2b/word/main/ftl/sql_table/document.ftl";
-    private final static String WORD_ZIP_PATH = "build/word/qqq.docx";
+    private static Log log = LogFactory.getLog(SqlScriptToWord.class);
+    
+    private static final String SQL_TABLE_WORD_TEMPLATE_PATH = "src/com/uxb2b/word/main/word_template/sql_table/";
+    private static final String SQL_TABLE_FTL_PATH = "src/com/uxb2b/word/main/ftl/sql_table/document.ftl";
+    private static final String WORD_ZIP_PATH = "build/word/qqq.docx";
 
     /**
      * 傳入由ParseSQLUtils所parse出來的sql_script vo
@@ -57,9 +62,9 @@ public class SqlScriptToWord {
             file.close();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("e:" + e);
         } catch (TemplateException e) {
-            e.printStackTrace();
+            log.error("e:" + e);
         }
 
         // file to zip
@@ -80,7 +85,7 @@ public class SqlScriptToWord {
             out.close();
             
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("e:" + e);
         }
     }
 

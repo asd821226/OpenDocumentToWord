@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<project name="CM_WORD" default="word_jar" basedir=".">
+
+	<!-- base path -->
+	<property name="resource.dir" value="." />
+
+	<property name="build.dir" value="${resource.dir}/build" />
+	<property name="src.dir" value="${resource.dir}/src" />
+
+	<!-- lib -->
+	<property name="lib.base.dir" value="${resource.dir}/lib" />
+
+	<!-- -->
+	<property name="class.dir" value="${build.dir}/classes" />
+	<property name="cm-word.jar" value="${build.dir}/cm-word.jar" />
+
+	<path id="classpath">
+		<fileset dir="${lib.base.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="${class.dir}" />
+	</target>
+
+	<target name="cleanClass">
+		<delete>
+			<fileset dir="${class.dir}">
+				<include name="**/*" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src.dir}" classpath="${classpath}" destdir="${class.dir}"
+                debug="true" deprecation="false" source="1.5" target="1.5" encoding="utf-8">
+			<classpath refid="classpath" />
+		</javac>
+		<copy todir="${class.dir}">
+			<fileset dir="${src.dir}">
+				<exclude name="**/*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="word_jar" depends="compile" description=" --> Build CM word jar">
+		<delete file="${cm-word.jar}" />
+		<jar destfile="${cm-word.jar}" compress="no">
+			<fileset dir="${class.dir}">
+				<include name="com/uxb2b/word/main/**" />
+			</fileset>
+		</jar>
+	</target>
+
+	<!-- check style -->
+	<property name="project.checkstyle.report.dir" value="${build.dir}/checkstyle" />
+
+	<!--檢測結果 xml -->
+	<property name="checkstyle.result"
+            value="${project.checkstyle.report.dir}/checkstyle-result.xml" />
+
+	<target name="checkstyle" depends="init">
+
+		<mkdir dir="${project.checkstyle.report.dir}" />
+
+		<taskdef resource="checkstyletask.properties" classpath="${lib.base.dir}/checkstyle-5.6-all.jar" />
+
+		<!-- See CHECKSTYLE_HOME/docs/anttask.html -->
+		<checkstyle config="${resource.dir}/checkstyle/uxb2b_checks.xml" failOnViolation="false" classpathref="classpath">
+			<formatter type="xml" tofile="${checkstyle.result}" />
+			<fileset dir="${src.dir}">
+				<include name="**/*.java"/>
+				<exclude name="uxb2b/**"/>
+				<exclude name="com/uxb2b/word/main/ftl/**"/>
+				<exclude name="com/uxb2b/word/main/word_template/**"/>
+				<!--
+				<exclude name="com/uxb2b/fpg/model/**"/>
+				<exclude name="com/uxb2b/fpg/service/IFpgDataService.java"/>
+				<exclude name="com/uxb2b/fpg/service/IRAService.java"/>
+				<exclude name="com/uxb2b/fpg/service/IReceiver.java"/>
+				-->
+			</fileset>
+		</checkstyle>
+		<!--生成報告,其格式取決於${checkstyle.report.style} -->
+		<xslt in="${checkstyle.result}" 
+                out="${project.checkstyle.report.dir}/checkstyle-report.html"
+                style="${resource.dir}/checkstyle/checkstyle-noframes.xsl" />
+	</target>
+
+</project>

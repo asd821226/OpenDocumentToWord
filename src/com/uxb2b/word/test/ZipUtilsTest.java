@@ -7,9 +7,14 @@ import java.util.zip.Adler32;
 import java.util.zip.CheckedOutputStream;
 import java.util.zip.ZipOutputStream;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import com.uxb2b.word.main.utils.ZipUtils;
 
 public class ZipUtilsTest {
+    
+    private static Log log = LogFactory.getLog(ZipUtilsTest.class);
 
     /**
      * @param args
@@ -36,7 +41,7 @@ public class ZipUtilsTest {
             
             out.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("e:" + e);
         }
     }
 

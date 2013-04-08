@@ -1,14 +1,15 @@
-package com.uxb2b.word.test;
+package test;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
+import test.util.ParseSQLUtils;
+
 
 import com.uxb2b.word.main.SqlScriptToWord;
 import com.uxb2b.word.main.utils.FileUtils;
 import com.uxb2b.word.main.vo.TableVO;
-import com.uxb2b.word.test.utils.ParseSQLUtils;
 
 public class SqlScriptToWordTest {
 
@@ -23,7 +24,6 @@ public class SqlScriptToWordTest {
         String sqlFile = "src/uxb2b/sql/Script_FN_LB04_script_phase2.sql";
         // String sqlFile = "src/uxb2b/sql/tcb_script.sql";
         Map<String, TableVO> voMap = SqlScriptToWordTest.parseScriptToVo(sqlFile);
-
         SqlScriptToWord.parseVo(voMap);
 
     }

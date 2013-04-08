@@ -1,4 +1,4 @@
-package com.uxb2b.word.test.utils;
+package test.util;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
